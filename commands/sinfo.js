@@ -14,5 +14,5 @@ exports.run = (client, message) => {
     embed.addField('AFK Timeout', `${message.guild.afkTimeout / 60} minutes`, true)
    .addField('AFK Channel', `${client.channels.get(message.guild.afkChannelID).name} (${message.guild.afkChannelID})`, true);
   }
-  return message.channel.sendEmbed(embed);
+  return message.channel.send({embed});
 };

@@ -15,6 +15,6 @@ exports.run = (client, message, args) => {
   .addField('User:', `${user.username}#${user.discriminator}`)
   .addField('Modrator:', `${message.author.username}#${message.author.discriminator}`)
   .addField('Reason:', reason);
-  client.channels.get(modlog.id).sendEmbed(embed);
-  return user.sendEmbed(embed);
+  client.channels.get(modlog.id).send({embed});
+  return user.send({embed});
 };

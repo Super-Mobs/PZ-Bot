@@ -9,5 +9,5 @@ exports.run = (client, message) => {
   .addField('Name:', `${user.username}`)
   .addField('ID:', `${user.id}`)
   .addField('Created On:', `${user.createdAt}`)
-  return message.channel.sendEmbed(embed);
+  return message.channel.send({embed});
 };

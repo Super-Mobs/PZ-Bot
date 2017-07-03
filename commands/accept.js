@@ -10,5 +10,5 @@ exports.run = (client, message) => {
   .setTimestamp()
   .addField('Action:', 'Verified')
   .addField('User:', `${user.username}#${user.discriminator}`)
-  client.channels.get(modlog.id).sendEmbed(embed).catch(console.error);
+  client.channels.get(modlog.id).send({embed}).catch(console.error);
 };

@@ -17,5 +17,5 @@ exports.run = (client, message) => {
     .addField('Modrator:', `${message.author.username}#${message.author.discriminator}`);
   if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('I do not have the correct permissions.').catch(console.error);
   message.guild.member(user).removeRole(muteRole)
-  client.channels.get(modlog.id).sendEmbed(embed).catch(console.error);
+  client.channels.get(modlog.id).send({embed}).catch(console.error);
 };

@@ -4,6 +4,7 @@ exports.run = (client, message) => {
   let member = message.member;
   let modlog = client.channels.find('name', 'logs');
   let user = message.author;
+  message.delete();
   member.addRole(accepted).catch(console.error);
   const embed = new Discord.RichEmbed()
   .setColor(0x00AE86)
